@@ -10,10 +10,12 @@ class contacto_controller{
     } 
     public static function mostrar(){
         if($_POST){
+        
             if(!isset($_POST["token"]) || !seg::validaSession($_POST["token"])){
-            echo "Acceso restringido";
-            exit();
-        }
+                echo "Acceso restringido";
+                exit();
+            }
+
             empty($_POST["txtNombre_contacto"])?$error[0]="El nombre de contacto es necesario":$nombre = $_POST["txtNombre_contacto"];
             empty($_POST["txtCorreo_contacto"])?$error[1]="El correo del contacto es necesario":$correo = $_POST["txtCorreo_contacto"];
            

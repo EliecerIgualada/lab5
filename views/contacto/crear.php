@@ -16,6 +16,7 @@
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="txtComentario_contacto"></textarea>
                         <div id="textHelp" class="form-text"></div>
                     </div>
+                    
                     <input type="hidden" value="<?php echo seg::getToken()?>" name="token">
 
                     <button type="submit" class="btn btn-success">Enviar</button>
